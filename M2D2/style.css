@@ -18,15 +18,12 @@ Github:     https://github.com/FlyingVespa
 
 /* Remove padding and margin */
 * {
-  margin: 0;
-  padding: 0;
-  border: 0;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: burlywood !important;
 }
 
-body {
-  font: 62.5%/1.5 "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
-  width: 100%;
-}
 .clear {
   clear: both;
 }
@@ -38,6 +35,23 @@ body {
 .left {
   float: left;
 }
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#review-image {
+  width: 20vh;
+}
+#review-image:hover {
+  opacity: 0.2;
+}
+
+#artist-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* ----------------- 1 ---------------- */
 
@@ -47,44 +61,38 @@ h3 {
   text-transform: uppercase;
   text-align: center;
 }
-h5 {
+h4 {
   text-align: center;
-  font-weight: 800 !important;
+
   text-transform: uppercase;
 }
-h6 {
+h5 {
   text-align: center;
-  font-style: italic;
-  font-weight: 600 !important;
-  text-transform: capitalize;
 }
 span {
   margin: 5px;
   font-size: 20px;
 }
 
+#artist-name {
+  font-weight: 800;
+  font-size: 2rem;
+}
+#album-name {
+  font-weight: 500;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
 /* ----------------- 2 images---------------- */
-.album-container {
-  display: flex;
-}
-.card {
-  display: grid;
-  grid-template-rows: max-content 200px 1fr;
-}
-#card {
-  width: 300px;
-}
+
 .album-reviews {
-  display: flex;
+  flex: 1;
   justify-content: space-around;
   margin: 10px;
   padding: 10px;
 }
-.review-container {
-  padding: 10px;
-  margin: 20px;
-  border: black solid 1px;
-}
+
 /* ----------------- 3 ---------------- */
 li {
   list-style-type: none;
@@ -108,6 +116,14 @@ li {
   width: 100%;
   height: 100%;
 }
+#album-container {
+  margin: 0 auto;
+  width: 100%;
+}
+#album-card {
+  background-color: cadetblue;
+}
+
 /* ----------------- 4 ---------------- */
 footer {
   left: 0;
@@ -131,3 +147,199 @@ footer {
 
 @media (min-width: 1200px) {
 }
+
+#quote-title {
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.card {
+  margin: 10px;
+  padding: 10px;
+}
+
+.review-container {
+  display: flex;
+  align-self: center;
+  padding: 20px;
+  border: red 5px solid;
+}
+#review-container {
+  justify-content: center;
+  justify-self: center;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.review-card {
+  display: flex;
+  border: black 2px solid;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+.hvrbox,
+.hvrbox * {
+  padding: 5px;
+  box-sizing: border-box;
+}
+.hvrbox {
+  padding: 5px;
+  position: relative;
+  overflow: hidden;
+  max-width: 250px;
+  height: auto;
+}
+.hvrbox img {
+  max-width: 250px;
+  border-radius: 10px;
+}
+.hvrbox .hvrbox-layer_bottom {
+  flex: 1;
+}
+
+.hvrbox .hvrbox-layer_top {
+  flex: 1;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+  opacity: 1;
+}
+.hvrbox .hvrbox-text {
+  flex: 1;
+  margin: 15px;
+  text-align: center;
+  font-size: 1.2rem;
+  position: absolute;
+  line-height: 1;
+}
+
+hr {
+  line-height: 0.5;
+  padding: 5px !important;
+  margin: 5px !important;
+}
+.ccc {
+  flex: 2;
+  margin: 10px;
+  padding: 15px;
+  border: grey 1px solid;
+  border-radius: 5px;
+}
+
+#myBtn {
+  position: fixed; /* Fixed/sticky position */
+  bottom: 100px;
+  right: 30px;
+  width: 5rem;
+  height: 4rem;
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+
+#yola {
+  width: 900px;
+}
+
+html, body, main
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+
+#carousel
+  position: relative
+  height: 400px
+  top: 50%
+  transform: translateY(-50%)
+  overflow: hidden
+
+  div
+    position: absolute
+    transition: transform 1s, left 1s, opacity 1s, z-index 0s
+    opacity: 1
+
+    img
+      width: 400px
+      transition: width 1s
+
+    &.hideLeft
+      left: 0%
+      opacity: 0
+      transform: translateY(50%) translateX(-50%)
+
+      img
+        width: 200px
+
+    &.hideRight
+      left: 100%
+      opacity: 0
+      transform: translateY(50%) translateX(-50%)
+      img
+        width: 200px
+
+    &.prev
+      z-index: 5
+      left: 30%
+      transform: translateY(50px) translateX(-50%)
+
+      img
+        width: 300px
+
+    &.prevLeftSecond
+      z-index: 4
+      left: 15%
+      transform: translateY(50%) translateX(-50%)
+      opacity: .7
+
+      img
+        width: 200px
+
+    &.selected
+      z-index: 10
+      left: 50%
+      transform: translateY(0px) translateX(-50%)
+
+    &.next
+      z-index: 5
+      left: 70%
+      transform: translateY(50px) translateX(-50%)
+
+      img
+        width: 300px
+
+    &.nextRightSecond
+      z-index: 4
+      left: 85%
+      transform: translateY(50%) translateX(-50%)
+      opacity: .7
+
+      img
+        width: 200px
+
+.buttons
+  position: fixed
+  left: 50%
+  transform: translateX(-50%)
+  bottom: 10px
