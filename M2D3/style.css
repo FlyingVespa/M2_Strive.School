@@ -46,7 +46,13 @@ h3 {
   font-family: Kanit;
   font-size: 2rem;
 }
-hr,
+
+#day {
+  box-sizing: border-box;
+}
+.container hr {
+  background-color: rgb(149, 0, 0);
+}
 h4,
 h6 {
   font-size: 3rem;
@@ -94,6 +100,7 @@ h6 {
 
 .jumbotron-text h5 {
   font-style: italic;
+  font-size: 2rem;
 }
 .jumbotron-text i {
   transform: translateY(-10px);
@@ -250,4 +257,40 @@ h6 {
 
 footer {
   color: #fff;
+}
+
+@media only screen and (max-width: 560px) {
+  .container h2 {
+    font-size: 2.2rem;
+  }
+
+  .jumbotron {
+    height: 20vh;
+  }
+
+  #break-time {
+    font-size: 1.5rem;
+  }
+
+  .jumbotron-text h5 {
+    font-size: 1.2rem;
+  }
+
+  .jumbotron i {
+    font-size: 1.5rem;
+  }
+
+  footer .container {
+    font-size: 10px;
+  }
+  #testimonial {
+    padding: 0;
+    margin: 0;
+  }
+  #testimonial img {
+    display: none;
+  }
+  #testimonial p {
+    font-size: 1rem;
+  }
 }
