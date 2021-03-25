@@ -26,54 +26,21 @@
 
   <body>
     <h1>Random Group Generator</h1>
-    <ul id="person-main-list"></ul>
-    <div class="tott"></div>
-    <input type="text" id="person" />
-    <button onclick="addPerson()">add item</button>
-    <button onclick="removePerson()">remove item</button>
 
-    <button onclick="getTotalPeople()">Show Total People</button>
+    <button onclick="getTotalPeople()">TOTAL MAIN LIST</button>
     <div class="wrap alt">
-      <p class="toggle-wrap">
-        Number of People per group
-        <a class="choice" href="#choice"
-          ><strong>TOGGLE</strong><span class="switch"></span
-        ></a>
-        Number of Groups
-      </p>
-      <p class="pergroup-wrap">
-        Number of students per group:
-        <input class="pergroup" type="integer" value="" />
-      </p>
-      <p class="numgroups-wrap">
-        Number of groups: <input class="numgroups" type="integer" value="" />
-      </p>
-      <p>
-        <textarea name="students" id="students" cols="40" rows="15">
-    Lovella
-    Harry
-    Bethel
-    Lettie
-    Shon
-    Alberto
-    Paola
-    Jim
-    Dagny
-    Altha
-    Shonda
-    Wesley</textarea
-        >
-      </p>
       <button onclick="start()">Make Groups</button>
       <div class="groups"></div>
     </div>
-    <p>
-      <small
-        >This tool was made as a proof of concept for
-        <a href="http://flipquiz.me">FlipQuiz</a>&trade;. Production version can
-        now be seen <a href="http://flipquiz.me/grouper">here</a>.</small
-      >
-    </p>
+
+    <div id="Result">a</div>
+    <input class="form-control" type="text" id="person" required />
+    <button onclick="addPerson(); add_element_to_array()">add item</button>
+    <button onclick="removePerson()">remove item</button>
+    <button onclick="display_array()">Array</button>
+    <ul id="person-main-list"></ul>
+    <div class="total-person-mainlist"></div>
+
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -84,6 +51,6 @@
       integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
       crossorigin="anonymous"
     ></script>
-    <script src="main.js" async defer></script>
+    <script src="main.js"></script>
   </body>
 </html>
