@@ -178,7 +178,7 @@ function assign() {
         break;
       }
     }
-    index--;
+    index--;-
   }
   console.log(totalGroups);
 }

@@ -19,11 +19,21 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 ## D3 Travel Website (group project)
 
 - Colab Project with Maximilan and Busala
--
 
-## D4 Random Name Multi Team Shuffle Generator
+## D4 Random Name Multi Team Generator
 
--
+- Project Brief:
+  _In this app you will generate teams and assign the participants to them.
+  You will use the Bootstrap components for the elements of your app._
+
+\*The features are the following:
+
+- Add reemove & update names.
+- Variable amount of teams (user input)
+- "Assign" button intitates selecting random name and putting in group. (on each click)
+- Each team should be inside a "column" to be responsive.
+- [EXTRA] Button to remove a name from a team, relisting in main list.
+- [EXTRA] Create a button to reset the state of the app.
 
 ## D5 Netflix Clone (group project)
 
