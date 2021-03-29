@@ -1,1 +1,2 @@
-- ![TrevelSite Image](https://github.com/FlyingVespa/M2_Strive.School/blob/main/M2D3/TravelSite%20-%20Layout%20Concept.png?raw=true&s=300)
+
+<img src="https://github.com/FlyingVespa/M2_Strive.School/blob/main/M2D3/TravelSite%20-%20Layout%20Concept.png?raw=true" alt="alt text"height="300">
