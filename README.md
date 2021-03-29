@@ -20,6 +20,8 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 
 - Colab Project with Maximilan and Busala
 - [TRAVELSITE - Completed Group Project Deployed](https://flyingvespa.github.io/strive-m2d3-travelsite/)
+- ![TrevelSite Image](https://github.com/FlyingVespa/M2_Strive.School/blob/main/M2D3/TravelSite%20-%20Layout%20Concept.png?raw=true)
+
 
 ## D4 Random Name Multi Team Generator
 
