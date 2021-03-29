@@ -108,13 +108,77 @@ function display_array() {
   for (var y = 0; y < array.length; y++) {
     e += "Element " + y + " = " + array[y] + "<br/>";
   }
+
   document.getElementById("Result").innerHTML = e;
 }
 
 //Shuffle array
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
+
+// function sort() {
+//   array = array.sort(() => Math.random() - 0.5);
+//   console.log(array);
+// }
+// sort();
+
+// devide array
+// function* divideGroup(arr, n) {
+//   for (let i = 0; i < arr.length; i += n) {
+//     yield arr.slice(i, i + n);
+//   }
+// }
+// let group = document.getElementById("groupInput").value;
+
+// oninput = console.log(group);
+
+// console.log([...chunks(array, group)]);
+
+// function splitArrayIntoChunksOfLen(arr, len) {
+//   var chunks = [],
+//     i = 0,
+//     n = arr.length;
+//   while (i < n) {
+//     chunks.push(arr.slice(i, (i += len)));
+//   }
+//   return chunks;
+// }
+// var alphabet = array;
+// var alphabetPairs = splitArrayIntoChunksOfLen(alphabet, 2);
+
+// //split into chunks of two
+// function display() {
+//   //Assigning the variable to the user input
+//   let n = document.getElementById("groupInput").value;
+//   document.getElementById("printhere").innerHTML = n;
+//   let arr = array;
+//   for (let i = 0; i < arr.length; i += n) {
+//     return arr.slice(i, i + n);
+//   }
+//   console.log(display(arr, n));
+// }
+
+function assign() {
+  array = ["aaaa", "bbb", 4444, 44444, 6666, 7777];
+  array.sort(function () {
+    return Math.round(Math.random()) - 0.5;
+  });
+
+  var noOfTeams = document.getElementById("groupInput").value;
+
+  let totalGroups = [];
+
+  for (let index = 0; index < noOfTeams; index++) {
+    totalGroups.push([]);
   }
+
+  for (let index = 0; index < array.length; index++) {
+    for (i = 0; i < noOfTeams; i++) {
+      if (index < array.length) {
+        totalGroups[i].push(array[index++]);
+      } else {
+        break;
+      }
+    }
+    index--;
+  }
+  console.log(totalGroups);
 }
