@@ -21,8 +21,6 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 - Colab Project with Maximilan and Busala
 - [TRAVELSITE - Completed Group Project Deployed](https://flyingvespa.github.io/strive-m2d3-travelsite/)
 
-
-
 ## D4 Random Name Multi Team Generator
 
 - Project Brief:
@@ -52,12 +50,14 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 - Creating branches and merging on Github
 - [NETFLIX - Completed Group Project Deployed](https://flyingvespa.github.io/m2d5-netflix/)
 
-
-
-## D6
+## D6 
+No exercises, just 4h tut on UX/UI and front end of web development.
 
 ## D7
+- Received a html in blog post format.
+- Use CSS selectors in manipulating the DOM
+- use JS functions manipulating DOM.
 
 ## D8
 
-## D9 - Create Calender
+## D9
