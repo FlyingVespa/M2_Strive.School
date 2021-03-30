@@ -19,6 +19,9 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 ## D3 Travel Website (group project)
 
 - Colab Project with Maximilan and Busala
+- [TRAVELSITE - Completed Group Project Deployed](https://flyingvespa.github.io/strive-m2d3-travelsite/)
+
+
 
 ## D4 Random Name Multi Team Generator
 
@@ -47,6 +50,9 @@ Most of the modue focuses on Bootstrap. Incoperating previously learned informat
 - Linking from nav to other html pages
 - Using Bootstrap Grid layout and Styles
 - Creating branches and merging on Github
+- [NETFLIX - Completed Group Project Deployed](https://flyingvespa.github.io/m2d5-netflix/)
+
+
 
 ## D6
 
