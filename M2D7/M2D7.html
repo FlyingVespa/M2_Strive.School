@@ -128,6 +128,9 @@
       <button onclick="removeMag()" class="btn btn-primary">
         Remove Search
       </button>
+      <button onclick="trimChars()" class="btn btn-primary">
+        Trim Paragraph
+      </button>
       <div class="nav-scroller py-1 mb-2">
         <nav class="nav d-flex justify-content-between" onclick="newLink()">
           <a
@@ -465,6 +468,7 @@
 
           <nav class="blog-pagination">
             <a
+              onclick="removeOlder()"
               class="btn btn-outline-primary"
               href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/353731835510277.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210330%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210330T112606Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=3d26f263d90c9355996533ee2464b9deb696a16a2ca987462f5f609bd3bf5898#"
               >Older</a
@@ -638,6 +642,21 @@
       //       background: transparent;"
       //   src="./M2D7_files/saved_resource.html"
       // ></iframe>;
+      const alertAuthors = function () {
+        const authors = document.querySelectorAll(
+          " main .blog-main .blog-post > h2 + p > a"
+        );
+        authors.forEach((a) => {
+          a.addEventListener("mouseenter", function (e) {
+            alert(e.target.innerText);
+          });
+        });
+      };
+      alertAuthors();
+      document.addEventListener("DOMContentLoaded", function (event) {
+        addNewPost();
+        removeOlder();
+      });
     </script>
     <script src="main.js"></script>
   </body>
