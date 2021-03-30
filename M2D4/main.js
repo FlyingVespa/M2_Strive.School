@@ -1,9 +1,6 @@
 const clearBtn = document.querySelector("#clearBtn");
-let nameOnMainList = document.getElementById("parent");
-const form = document.querySelector("#form");
 const person = document.getElementById("name-input");
 const mainList = document.querySelector(".main-name-list");
-const todoList = document.querySelector(".list-group");
 const item = document.querySelector(".list-person-name");
 
 //Add person to main List
@@ -12,13 +9,19 @@ function addPerson() {
   if (person.value !== "") {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.className = "list-person-name";
+    li.className = "col-6 list-person-name";
+
     span.className = "person-name";
     span.appendChild(document.createTextNode(`${newPerson}`));
     li.appendChild(span);
     mainList.appendChild(li);
     // Clear input
     person.value = "";
+    //   const list = `
+    // <li class=" list-person-name"">
+    // <span class="person-name">${newPerson}</span>
+    // </li>`;
+    //   mainList.appendChild(list);
   } else {
     alert("Please add a name");
   }
