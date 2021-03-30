@@ -9,19 +9,21 @@ function addPerson() {
   if (person.value !== "") {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.className = "col-6 list-person-name";
-
+    li.className = "list-person-name m-1";
     span.className = "person-name";
     span.appendChild(document.createTextNode(`${newPerson}`));
     li.appendChild(span);
     mainList.appendChild(li);
+    // Alternative create element (preffered method)
+    // const newName = `
+    //     <div class="col card">
+    //     <span>${newPerson}<i class="fas fa-trash float-right"></i></span>
+    //     </div>
+    //       `;
+    // mainList.innerHTML += newName;
+
     // Clear input
     person.value = "";
-    //   const list = `
-    // <li class=" list-person-name"">
-    // <span class="person-name">${newPerson}</span>
-    // </li>`;
-    //   mainList.appendChild(list);
   } else {
     alert("Please add a name");
   }

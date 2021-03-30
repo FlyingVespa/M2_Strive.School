@@ -32,60 +32,80 @@
       <hr />
       <!-- Input Name & Group Container  Start-->
       <div class="row">
-        <div class="col-6 input-group mb-3">
-          <form id="form">
+        <div class=" input-group mb-3">
+       
             <input
               id="name-input"
               type="text"
-              class="form-control"
+              class="col-4 form-control"
               placeholder="Person's Name"
             />
             <div class="input-group-append">
               <button
-                class="btn btn-secondary"
+                class="btn btn-secondary mr-2"
                 type="button"
                 onclick="addPerson()"
               >
                 ADD
               </button>
             </div>
-          </form>
-        </div>
-       
-        <button id="clearBtn" type="button" class="btn btn-dark btn-sm">Clear All</button>
-      </div>
-      <div class="card-footer">
-        <form id="form">
-          <div class="input-group">
-
-        <div class="col-3 input-group mb-3">
-          <input
+            <input
+            id="group-input"
             type="text"
-            class="form-control"
+            class="col-2 form-control"
             placeholder="Amount of Groups"
           />
           <div class="input-group-append">
-            <button class="btn btn-secondary" type="button">SET</button>
+            <button
+              class="btn btn-secondary"
+              type="button"
+              onclick="setGroup()"
+            >
+              SET
+            </button>
           </div>
+         
         </div>
+       
       </div>
+
+      <!-- Input Name & Group End -->
+      <!-- Main Name List Start -->
+      <h4 class="float-left">Main List</h4>
       <button
         onclick="clearMainList()"
         id="clearBtn"
         type="button"
-        class="btn btn-danger btn-sm"
+        class="btn btn-danger btn-sm float-right"
       >
         Clear All
       </button>
-      <!-- Input Name & Group End -->
-      <!-- Main Name List Start -->
-      <h4>Main List</h4>
+      <br>
+      <hr>
       <div class="row">
-        <ul class="main-name-list">
+        <ul class="main-name-list m-1">
           <li class=" list-person-name"">
             <span class="person-name">It's a dummy todo item</span>
           </li>
         </ul>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-4 card">
+            <span>${newPerson} <i class="fas fa-trash float-right"></i></span>
+        </div>
+        <!-- JUST A PLACEHOLDER, will not use this -->
+        <div class="group-container">
+          <ul class="all-groups">
+            <li class="group-item">Group1
+              <ul class="main-name-list m-1">
+                <li class=" list-person-name"">
+                  <span class="person-name">It's a dummy todo item</span>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
