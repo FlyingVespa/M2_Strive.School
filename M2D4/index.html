@@ -32,24 +32,23 @@
       <hr />
       <!-- Input Name & Group Container  Start-->
       <div class="row">
-        <div class=" input-group mb-3">
-       
-            <input
-              id="name-input"
-              type="text"
-              class="col-4 form-control"
-              placeholder="Person's Name"
-            />
-            <div class="input-group-append">
-              <button
-                class="btn btn-secondary mr-2"
-                type="button"
-                onclick="addPerson()"
-              >
-                ADD
-              </button>
-            </div>
-            <input
+        <div class="input-group mb-3">
+          <input
+            id="name-input"
+            type="text"
+            class="col-4 form-control"
+            placeholder="Person's Name"
+          />
+          <div class="input-group-append">
+            <button
+              class="btn btn-secondary mr-2"
+              type="button"
+              onclick="addPerson()"
+            >
+              ADD
+            </button>
+          </div>
+          <input
             id="group-input"
             type="text"
             class="col-2 form-control"
@@ -64,13 +63,18 @@
               SET
             </button>
           </div>
-         
         </div>
-       
       </div>
 
       <!-- Input Name & Group End -->
       <!-- Main Name List Start -->
+      <button
+        onclick="getTotalPeople()"
+        class="btn btn-dark btn-sm float-right"
+      >
+        Total people
+      </button>
+      <span class="display-4 total-person-mainlist card col-2">0</span>
       <h4 class="float-left">Main List</h4>
       <button
         onclick="clearMainList()"
@@ -80,28 +84,51 @@
       >
         Clear All
       </button>
-      <br>
-      <hr>
+      <br />
+      <hr />
       <div class="row">
         <ul class="main-name-list m-1">
-          <li class=" list-person-name"">
-            <span class="person-name">It's a dummy todo item</span>
+          <li class="list-person-name card">
+            <span class="person-name"
+              >It's a dummy todo item <i class="fas fa-trash float-right"></i
+            ></span>
           </li>
         </ul>
       </div>
-      <hr>
+      <hr />
+      <div class="assign-buttons">
+        <button
+          onclick=""
+          id="assignBtn"
+          type="button"
+          class="btn btn-primary btn-sm"
+          disabled
+        >
+          Assign Random Person To Group
+        </button>
+        <button
+          onclick=""
+          id="assignBtn"
+          type="button"
+          class="btn btn-primary btn-sm"
+          disabled
+        >
+          Assign All Randomly To Groups
+        </button>
+      </div>
       <div class="row">
-        <div class="col-4 card">
+        <!-- <div class="col-4 card">
             <span>${newPerson} <i class="fas fa-trash float-right"></i></span>
-        </div>
+        </div> -->
         <!-- JUST A PLACEHOLDER, will not use this -->
         <div class="group-container">
           <ul class="all-groups">
-            <li class="group-item">Group1
-              <ul class="main-name-list m-1">
-                <li class=" list-person-name"">
+            <li class="group-item">
+              Group1
+              <ul class="main-name-list">
+                <!-- <li class=" list-person-name"">
                   <span class="person-name">It's a dummy todo item</span>
-                </li>
+                </li> -->
               </ul>
             </li>
           </ul>

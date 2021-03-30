@@ -12,3 +12,10 @@ ul {
   width: 500px;
   margin: 0 auto;
 }
+span {
+  cursor: pointer;
+}
+
+.assign-buttons {
+  margin: 0 auto;
+}

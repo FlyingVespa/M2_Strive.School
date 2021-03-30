@@ -1,7 +1,7 @@
 const clearBtn = document.querySelector("#clearBtn");
 const person = document.getElementById("name-input");
 const mainList = document.querySelector(".main-name-list");
-const item = document.querySelector(".list-person-name");
+//const item = document.querySelector(".list-person-name");
 
 //Add person to main List
 function addPerson() {
@@ -9,10 +9,13 @@ function addPerson() {
   if (person.value !== "") {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.className = "list-person-name m-1";
+    li.className = "col list-person-name card";
     span.className = "person-name";
     span.appendChild(document.createTextNode(`${newPerson}`));
     li.appendChild(span);
+    li.addEventListener("click", function (e) {
+      e.target.remove();
+    });
     mainList.appendChild(li);
     // Alternative create element (preffered method)
     // const newName = `
@@ -29,30 +32,32 @@ function addPerson() {
   }
 }
 
-function removePerson(e) {
-  item.remove();
-}
+// function removePerson(e) {
+//   item.remove();
+// }
 
-function clearMainList() {
-  mainList.innerHTML = "";
-}
+// function clearMainList() {
+//   mainList.innerHTML = "";
+// }
 
-item.onclick = (e) => {
-  removePerson(e);
-};
-/*
+// item.onclick = (e) => {
+//   removePerson(e);
+// };
+
 // Delete Name from Main List
 
-
- Get The total People on Main List (before assigning to groups)
+// Get The total People on Main List (before assigning to groups)
 function getTotalPeople() {
-  let person = document.querySelectorAll("#personlisted").length;
+  let personName = document.querySelectorAll(".list-person-name").length;
   let count = document.querySelector(".total-person-mainlist");
-  count.innerText = person + " People On List";
+
+  count.innerText = personName;
+
   console.log(person);
 }
 
-// Gets Amount of Groups
+/*
+  // Gets Amount of Groups
 function groupTotal() {
   let NumberOfGroups = document.getElementById("group-amount").value;
   let NumberOfGroup = document.querySelector(".group-amount-show");
