@@ -9,7 +9,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="stylesheet" href="style.css" />
+
     <!-- FontAwesome -->
     <link
       rel="stylesheet"
@@ -22,30 +22,73 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <h1>Random Group Generator</h1>
+    <div class="container">
+      <h1>Random Group Generator</h1>
+      <hr />
+      <!-- Input Name & Group Container  Start-->
+      <div class="row">
+        <div class="col-6 input-group mb-3">
+          <form id="form">
+            <input
+              id="name-input"
+              type="text"
+              class="form-control"
+              placeholder="Person's Name"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                onclick="addPerson()"
+              >
+                ADD
+              </button>
+            </div>
+          </form>
+        </div>
+       
+        <button id="clearBtn" type="button" class="btn btn-dark btn-sm">Clear All</button>
+      </div>
+      <div class="card-footer">
+        <form id="form">
+          <div class="input-group">
 
-    <button onclick="getTotalPeople()">TOTAL MAIN LIST</button>
-    <div class="wrap alt">
-      <button onclick="start()">Make Groups</button>
-      <div class="groups"></div>
+        <div class="col-3 input-group mb-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Amount of Groups"
+          />
+          <div class="input-group-append">
+            <button class="btn btn-secondary" type="button">SET</button>
+          </div>
+        </div>
+      </div>
+      <button
+        onclick="clearMainList()"
+        id="clearBtn"
+        type="button"
+        class="btn btn-danger btn-sm"
+      >
+        Clear All
+      </button>
+      <!-- Input Name & Group End -->
+      <!-- Main Name List Start -->
+      <h4>Main List</h4>
+      <div class="row" id="main-name-list">
+        <ul class="main-name-list">
+          <li class="list-person-name"">
+            <span class="person-name">It's a dummy todo item</span>
+           
+          </li>
+        </ul>
+      </div>
     </div>
-
-    <div id="Result">a</div>
-    <input class="form-control" type="text" id="person" required />
-    <button onclick="addPerson(); add_element_to_array()">add item</button>
-    <button onclick="removePerson()">remove item</button>
-    <button onclick="display_array()">Array</button>
-    <button onclick="assign()">sort</button>
-    <input type="text" name="group" id="groupInput" />
-    <button onclick="display()">Divide Groups</button>
-    <ul id="person-main-list"></ul>
-    <div class="total-person-mainlist"></div>
-    <div id="printhere"></div>
-    <div id="teams"></div>
-    <div id="teams"></div>
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
