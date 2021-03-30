@@ -112,9 +112,24 @@
           </div>
         </div>
       </header>
-
+      <button onclick="newLink()" class="btn btn-primary">Link Add</button>
+      <button onclick="changeHeaderColor()" class="btn btn-primary">
+        Change H1 color
+      </button>
+      <button onclick="jumbronBackgroud()" class="btn btn-primary">
+        Jumbotron BG
+      </button>
+      <button onclick="removeElsewehere()" class="btn btn-primary">
+        aaa BG
+      </button>
+      <button onclick="changeColSize()" class="btn btn-primary">
+        col size
+      </button>
+      <button onclick="removeMag()" class="btn btn-primary">
+        Remove Search
+      </button>
       <div class="nav-scroller py-1 mb-2">
-        <nav class="nav d-flex justify-content-between">
+        <nav class="nav d-flex justify-content-between" onclick="newLink()">
           <a
             class="p-2 text-muted"
             href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/353731835510277.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210330%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210330T112606Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=3d26f263d90c9355996533ee2464b9deb696a16a2ca987462f5f609bd3bf5898#"
@@ -555,7 +570,7 @@
 
           <div class="p-4">
             <h4 class="font-italic">Elsewhere</h4>
-            <ol class="list-unstyled">
+            <ol class="list-unstyled" id="elseW">
               <li>
                 <a
                   href="https://s3.eu-west-1.amazonaws.com/eduflow-production/activity-resources/353731835510277.html?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIA2TAWW44RDWPS6YGR%2F20210330%2Feu-west-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20210330T112606Z&amp;X-Amz-Expires=600&amp;X-Amz-SignedHeaders=host&amp;response-content-disposition=inline%3B%20filename%2A%3DUTF-8%27%27index.html&amp;X-Amz-Signature=3d26f263d90c9355996533ee2464b9deb696a16a2ca987462f5f609bd3bf5898#"
@@ -599,31 +614,31 @@
 
     <script>
       /*
-    JS Exercises
-    EX11) Write a function to add a new link into the navbar
-    EX12) Write a function to change the color of the main title
-    EX13) Write a function to change the background of the jumbotron
-    EX14) Write a function to remove all the links under "Elsewhere"
-    EX15) Write a function to change the column size for post headings
-    EX16) Write a function to remove the "Search" magnifying glass icon
-    EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-    EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-    EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-    EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+  JS Exercises
+  EX11) Write a function to add a new link into the navbar
+  EX12) Write a function to change the color of the main title
+  EX13) Write a function to change the background of the jumbotron
+  EX14) Write a function to remove all the links under "Elsewhere"
+  EX15) Write a function to change the column size for post headings
+  EX16) Write a function to remove the "Search" magnifying glass icon
+  EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+  EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+  EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+  EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 */
-      <iframe
-        id="nr-ext-rsicon"
-        style="
-    position: absolute;
-    display: none;
-    width: 50px;
-    height: 50px;
-    z-index: 2147483647;
-    border-style: none;
-    background: transparent;
-  "
-        src="./M2D7_files/saved_resource.html"
-      ></iframe>;
+      // <iframe
+      //   id="nr-ext-rsicon"
+      //   style="
+      //       position: absolute;
+      //       display: none;
+      //       width: 50px;
+      //       height: 50px;
+      //       z-index: 2147483647;
+      //       border-style: none;
+      //       background: transparent;"
+      //   src="./M2D7_files/saved_resource.html"
+      // ></iframe>;
     </script>
+    <script src="main.js"></script>
   </body>
 </html>
