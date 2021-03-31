@@ -616,6 +616,7 @@
       </p>
     </footer>
 
+    <script src="./main.js"></script>
     <script>
       /*
   JS Exercises
@@ -630,34 +631,18 @@
   EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
   EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 */
-      // <iframe
-      //   id="nr-ext-rsicon"
-      //   style="
-      //       position: absolute;
-      //       display: none;
-      //       width: 50px;
-      //       height: 50px;
-      //       z-index: 2147483647;
-      //       border-style: none;
-      //       background: transparent;"
-      //   src="./M2D7_files/saved_resource.html"
-      // ></iframe>;
-      const alertAuthors = function () {
-        const authors = document.querySelectorAll(
-          " main .blog-main .blog-post > h2 + p > a"
-        );
-        authors.forEach((a) => {
-          a.addEventListener("mouseenter", function (e) {
-            alert(e.target.innerText);
-          });
-        });
-      };
-      alertAuthors();
-      document.addEventListener("DOMContentLoaded", function (event) {
-        addNewPost();
-        removeOlder();
-      });
+      <iframe
+        id="nr-ext-rsicon"
+        style="
+            position: absolute;
+            display: none;
+            width: 50px;
+            height: 50px;
+            z-index: 2147483647;
+            border-style: none;
+            background: transparent;"
+        src="./M2D7_files/saved_resource.html"
+      ></iframe>;
     </script>
-    <script src="main.js"></script>
   </body>
 </html>

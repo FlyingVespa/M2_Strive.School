@@ -1,3 +1,7 @@
+window.onload = function () {
+  addNewPost();
+  removeOlder();
+};
 // JS Exercises
 // DONE EX11) Write a function to add a new link into the navbar
 function newLink() {
@@ -56,15 +60,7 @@ function trimChars() {
   });
 }
 
-// EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-
-const newerBtn = document.querySelector(
-  "body > main > div > div > nav > a.btn.btn-outline-secondary"
-);
-
-window.onload() = () => {
-  addNewPost();
-};
+//DONE EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
 
 function addNewPost() {
   const btn = document.querySelectorAll(".blog-pagination a")[1];
@@ -80,22 +76,26 @@ function addNewPost() {
   });
 }
 
-// EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+//DONE EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
 
-// function removeOlder() {
-//   const authors = document.querySelectorAll(
-//     " main .blog-main .blog-post > h2 + p"
-//   );
-//   authors.forEach((a) => {
-//     a.addEventListener("mouseenter", function (e) {
-//       alert(e.target.innerText);
-//     });
-// //   });
+function removeOlder() {
+  const btn = document.querySelectorAll(".blog-pagination a")[0];
+  btn.removeAttribute("href");
+  btn.addEventListener("click", function () {
+    const blogs = document.querySelectorAll(".blog-post");
+    blogs[blogs.length - 1].remove();
+  });
+}
 
-//   const olderBtn = document.querySelector(
-//     "body > main > div > div > nav > a.btn.btn-outline-primary"
-//   );
-//   olderBtn.removeAttribute("href");
-// }
+//DONE EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
-// EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+const alertAuthors = function () {
+  const authors = document.querySelectorAll(
+    " main .blog-main .blog-post > h2 + p > a"
+  );
+  authors.forEach((a) => {
+    a.addEventListener("mouseenter", function (e) {
+      alert(e.target.innerText);
+    });
+  });
+};
