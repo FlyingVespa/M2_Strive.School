@@ -59,5 +59,9 @@ No exercises, just 4h tut on UX/UI and front end of web development.
 - use JS functions manipulating DOM.
 
 ## D8
+- Work in pairs - was assigned with Mohammed S.
+- Create a copy of image provided
+
+[M2D8 - Colab Project](https://flyingvespa.github.io/m2d8-colab-excersizes/)
 
 ## D9
