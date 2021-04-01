@@ -45,6 +45,15 @@
         </div>
       </div>
     </nav>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">
+          This is a modified jumbotron that occupies the entire horizontal space
+          of its parent.
+        </p>
+      </div>
+    </div>
 
     <h2>Album Collection</h2>
     <div
@@ -78,14 +87,15 @@
               </ul>
             </div>
           </div>
-          <a href="#r1" class="btn btn-secondary w-100">Review</a>
+          <a href="#r1" class="btn btn-secondary">Review</a>
         </div>
       </div>
       <div
         id="album-card"
         class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
       >
-        <img src="./img/Josiedunne-tobethelittlefish.jpg" alt="josie" />
+        <img src="./img/Josiedunne-tobethelittlefish.jpg" alt="josie"></img>
+        <!-- <p class="badge badge-warning" id="badge">Pop</p> -->
         <div class="card-body">
           <div class="album-artist-name">
             <h4 id="artist-name">Josie Dunne</h4>
@@ -108,7 +118,7 @@
               </ul>
             </div>
           </div>
-          <a href="#r2" class="btn btn-secondary w-100">Review</a>
+          <a href="#r2" class="btn btn-secondary">Review</a>
         </div>
       </div>
       <div
@@ -138,7 +148,7 @@
               </ul>
             </div>
           </div>
-          <a href="#r3" class="btn btn-secondary w-100">Review</a>
+          <a href="#r3" class="btn btn-secondary">Review</a>
         </div>
       </div>
       <div
@@ -168,7 +178,7 @@
               </ul>
             </div>
           </div>
-          <a href="#r4" class="btn btn-secondary w-100">Review</a>
+          <a href="#r4" class="btn btn-secondary">Review</a>
         </div>
       </div>
       <div
@@ -198,7 +208,7 @@
               </ul>
             </div>
           </div>
-          <a href="#r5" class="btn btn-secondary w-100">Review</a>
+          <a href="#r5" class="btn btn-secondary">Review</a>
         </div>
       </div>
       <div
@@ -228,7 +238,7 @@
               </ul>
             </div>
           </div>
-          <a href="#r6" class="btn btn-secondary w-100">Review</a>
+          <a href="#r6" class="btn btn-secondary">Review</a>
         </div>
       </div>
     </div>
@@ -488,7 +498,7 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./img/coldplay.jpg" class="d-block w-100" alt="..." />
+              <img src="./img/coldplay.jpg" class="d-block" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -497,14 +507,14 @@
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/coldplay.jpg" class="d-block w-100" alt="..." />
+              <img src="./img/coldplay.jpg" class="d-block" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./img/justin.jpg"d-block w-100" alt="..." />
+              <img src="./img/justin.jpg" alt="..." />
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -592,33 +602,9 @@
       window.onscroll = function () {
         scrollFunction();
         totalCards();
+        addBadgeGenre();
       };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 20 ||
-          document.documentElement.scrollTop > 20
-        ) {
-          mybutton.style.display = "block";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
-
-      function totalCards() {
-        let card = document.querySelectorAll("#album-card");
-        let total = document.getElementById("card-total");
-        for (let i = 1; i < card.length; i++) {
-          i += 1;
-          total.innerHTML = `${i}`;
-        }
-      }
     </script>
+    <script src="main.js"></script>
   </body>
 </html>

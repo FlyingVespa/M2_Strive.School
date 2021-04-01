@@ -1,327 +1,624 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- Bootstrap 4.6-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Hedri's ToneDeaf List</title>
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="style.css" />
-  <!-- FontAwesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-  <!-- Bootstrap 4.6-->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
-    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link active" href="#"
+            >Home <span class="sr-only">(current)</span></a
+          >
+          <a class="nav-item nav-link" href="#01">Reviews</a>
+          <a class="nav-item nav-link" href="#02">Pricing</a>
+          <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        </div>
+      </div>
+    </nav>
 
-</head>
-<header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#0">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#1">Album Collection</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#2">Album Reviews</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#3">Hall of Shame</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#4">Featured Artist</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <h1>Being ToneDeaf</h1>
-</header>
-
-<body>
-
-  <h2>Album Collection</h2>
-  <hr>
-  <div class="album-container row">
-
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-      <img src="./img/lanadelrey-borntodie.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          <div class="album-artist">
-            <h5>Lana Del Rey</h5>
-          </div>
-          <div class="album-title">
-            <h6>Born To Die</h6>
+    <h2>Album Collection</h2>
+    <div
+      id="album-container"
+      class="container row col-9 justify-content-center bg-secondary"
+    >
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey-borntodie" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Lana Del Rey</h4>
+            <hr />
+            <h5 id="album-name">Born To Die</h5>
           </div>
           <div class="row">
             <div class="col left" id="metainfo">
               <ul>
                 <li>Released:</li>
                 <li>Genre:</li>
-                <Li>Songs</Li>
+                <li>Songs</li>
               </ul>
             </div>
             <div class="col right" id="metainfo-var">
               <ul>
                 <li>2012</li>
                 <li>Electronica</li>
-                <Li>12</Li>
+                <li>12</li>
               </ul>
             </div>
           </div>
-        </p>
-        <a href="#" class="btn btn-primary ">Review</a>
+          <a href="#r1" class="btn btn-secondary w-100">Review</a>
+        </div>
       </div>
-    </div>
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-      <img src="./img/Josiedunne-tobethelittlefish.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          <div class="album-artist">
-            <h5>Josie Dunne</h5>
-          </div>
-          <div class="album-title">
-            <h6>To be the little fish</h6>
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/Josiedunne-tobethelittlefish.jpg" alt="josie" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Josie Dunne</h4>
+            <hr />
+            <h5 id="album-name">To be the little fish</h5>
           </div>
           <div class="row">
             <div class="col left" id="metainfo">
               <ul>
                 <li>Released:</li>
                 <li>Genre:</li>
-                <Li>Songs</Li>
+                <li>Songs</li>
               </ul>
             </div>
             <div class="col right" id="metainfo-var">
               <ul>
                 <li>2018</li>
                 <li>Pop</li>
-                <Li>6</Li>
+                <li>6</li>
               </ul>
             </div>
           </div>
-        </p>
-        <a href="#" class="btn btn-primary ">Review</a>
+          <a href="#r2" class="btn btn-secondary w-100">Review</a>
+        </div>
       </div>
-    </div>
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-      <img src="./img/lizzo-goodashell.jpg" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <p class="card-text">
-          <div class="album-artist">
-            <h5>Lizzo</h5>
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/lizzo-goodashell.jpg" alt="lizzo" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Lizzo</h4>
+            <hr />
+            <h5 id="album-name">Cuz I love you</h5>
           </div>
-          <div class="album-title">
-            <h6>Cuz I love you</h6>
-
-            <div class="row">
-              <div class="col left" id="metainfo">
-                <ul>
-                  <li>Released:</li>
-                  <li>Genre:</li>
-                  <Li>Songs:</Li>
-                </ul>
-              </div>
-              <div class="col right" id="metainfo-var">
-                <ul>
-                  <li>2019</li>
-                  <li>Pop</li>
-                  <Li>14</Li>
-                </ul>
-              </div>
-            </div>
-        </p>
-        <a href="#" class="btn btn-primary ">Review</a>
-      </div>
-    </div>
-
-  </div>
-  <div class=" card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-    <img src="./img/lanadelrey-borntodie.jpg" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <p class="card-text">
-        <div class="album-artist">
-          <h5>Lana Del Rey</h5>
-        </div>
-        <div class="album-title">
-          <h6>Born To Die</h6>
-        </div>
-        <div class="row">
-          <div class="col left" id="metainfo">
-            <ul>
-              <li>Released:</li>
-              <li>Genre:</li>
-              <Li>Songs</Li>
-            </ul>
-          </div>
-          <div class="col right" id="metainfo-var">
-            <ul>
-              <li>2012</li>
-              <li>Electronica</li>
-              <Li>12</Li>
-            </ul>
-          </div>
-        </div>
-      </p>
-      <a href="#" class="btn btn-primary ">Review</a>
-    </div>
-  </div>
-  <div class=" card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-    <img src="./img/Josiedunne-tobethelittlefish.jpg" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <p class="card-text">
-        <div class="album-artist">
-          <h5>Josie Dunne</h5>
-        </div>
-        <div class="album-title">
-          <h6>To be the little fish</h6>
-        </div>
-        <div class="row">
-          <div class="col left" id="metainfo">
-            <ul>
-              <li>Released:</li>
-              <li>Genre:</li>
-              <Li>Songs</Li>
-            </ul>
-          </div>
-          <div class="col right" id="metainfo-var">
-            <ul>
-              <li>2018</li>
-              <li>Pop</li>
-              <Li>6</Li>
-            </ul>
-          </div>
-        </div>
-      </p>
-      <a href="#" class="btn btn-primary ">Review</a>
-    </div>
-  </div>
-  <div class=" card shadow-sm p-3 mb-5 bg-white rounded container-md" id="card">
-    <img src="./img/lizzo-goodashell.jpg" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <p class="card-text">
-        <div class="album-artist">
-          <h5>Lizzo</h5>
-        </div>
-        <div class="album-title">
-          <h6>Cuz I love you</h6>
-
           <div class="row">
             <div class="col left" id="metainfo">
               <ul>
                 <li>Released:</li>
                 <li>Genre:</li>
-                <Li>Songs:</Li>
+                <li>Songs</li>
               </ul>
             </div>
             <div class="col right" id="metainfo-var">
               <ul>
                 <li>2019</li>
                 <li>Pop</li>
-                <Li>14</Li>
+                <li>14</li>
               </ul>
             </div>
           </div>
-      </p>
-      <a href="#" class="btn btn-primary ">Review</a>
-    </div>
-  </div>
-
-  </div>
-  <br>
-
-  <hr>
-  <h2>Reviews</h2
-  <div class="album-reviews">
-    >
-    <div class="col-4 review-container">
-      <h3>This Is a review</h3><span>by:</span><span>Hedri Nel</span>
-      <hr>
-      <div class="row justify-content-center"> <span id="mdata">Artist:</span><span>Lana Del Rey</span> <br>
-        <span id="mdata">Album:</span><span>Born To Die</span><br>
-        <span id="mdata">Genre:</span><span>Electrica </span>
-      </div>
-     
-      <div class="metadata row">
-        <div class="col-6"><img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey" id="img-review">
+          <a href="#r3" class="btn btn-secondary w-100">Review</a>
         </div>
-        <div class="col-6">
+      </div>
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey-borntodie" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Lana Del Rey</h4>
+            <hr />
+            <h5 id="album-name">Born To Die</h5>
+          </div>
           <div class="row">
-                 <p>It would take a near miracle for 25-year-old singer-songwriter Lana Del Rey’s debut album to meet
-            expectations. The New Yorker’s debut single, Video Games, inspired sky-high critical hopes. But while Born
-            to Die doesn’t walk on water, its misty-eyed retro-pop makes for compelling listening. Musically, Del Rey –
-            who co-writes each track – has hit upon a sort of 21st-century cracked soul. Grandiose strings and minor-key
-            melodies collide with hip-hop rhythms and gurgling atmospherics, all conveying an epic sadness.
-
-            Del Rey’s vocals add star quality, flitting between a smoky, sultry purr and playful high-pitched tease,
-            thriving on the drama of her own innate contradictions. She champions hedonism and sexual power one minute;
-            craves the protection of a “screwed up and brilliant” lover the next.
-
-            Coupled with a film noir-ish attention to detail – the “red nail polish” and “Jesus on the dash” – and an
-            obsession with faded post-war glamour, Born to Die often sounds like some great lost soundtrack to LA
-            Confidential. Inevitably, 51 minutes of melodrama becomes draining. But it captures Del Rey’s mystique
-            perfectly. Perhaps success will put a smile on her face.</p>
+            <div class="col left" id="metainfo">
+              <ul>
+                <li>Released:</li>
+                <li>Genre:</li>
+                <li>Songs</li>
+              </ul>
+            </div>
+            <div class="col right" id="metainfo-var">
+              <ul>
+                <li>2012</li>
+                <li>Electronica</li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#r4" class="btn btn-secondary w-100">Review</a>
         </div>
       </div>
-      
-    </div>
-    
-  </div>
-  <div class="col-6 review-container">
-    <h3>This Is a review</h3><span>by:</span><span>Hedri Nel</span>
-    <hr>
-    <div class="row justify-content-center"> <span id="mdata">Artist:</span><span>Lana Del Rey</span> <br>
-      <span id="mdata">Album:</span><span>Born To Die</span><br>
-      <span id="mdata">Genre:</span><span>Electrica </span>
-    </div>
-   
-    <div class="metadata row">
-      <div class="col-6"><img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey" id="img-review">
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey-borntodie" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Lana Del Rey</h4>
+            <hr />
+            <h5 id="album-name">Born To Die</h5>
+          </div>
+          <div class="row">
+            <div class="col left" id="metainfo">
+              <ul>
+                <li>Released:</li>
+                <li>Genre:</li>
+                <li>Songs</li>
+              </ul>
+            </div>
+            <div class="col right" id="metainfo-var">
+              <ul>
+                <li>2012</li>
+                <li>Electronica</li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#r5" class="btn btn-secondary w-100">Review</a>
+        </div>
       </div>
-      <div class="col-6">
-        <div class="row">
-               <p>It would take a near miracle for 25-year-old singer-songwriter Lana Del Rey’s debut album to meet
-          expectations. The New Yorker’s debut single, Video Games, inspired sky-high critical hopes. But while Born
-          to Die doesn’t walk on water, its misty-eyed retro-pop makes for compelling listening. Musically, Del Rey –
-          who co-writes each track – has hit upon a sort of 21st-century cracked soul. Grandiose strings and minor-key
-          melodies collide with hip-hop rhythms and gurgling atmospherics, all conveying an epic sadness.
-
-          Del Rey’s vocals add star quality, flitting between a smoky, sultry purr and playful high-pitched tease,
-          thriving on the drama of her own innate contradictions. She champions hedonism and sexual power one minute;
-          craves the protection of a “screwed up and brilliant” lover the next.
-
-          Coupled with a film noir-ish attention to detail – the “red nail polish” and “Jesus on the dash” – and an
-          obsession with faded post-war glamour, Born to Die often sounds like some great lost soundtrack to LA
-          Confidential. Inevitably, 51 minutes of melodrama becomes draining. But it captures Del Rey’s mystique
-          perfectly. Perhaps success will put a smile on her face.</p>
+      <div
+        id="album-card"
+        class="card col-lg-3 col-md-4 col-sm-6 col-xs-12 shadow-sm"
+      >
+        <img src="./img/lanadelrey-borntodie.jpg" alt="lanadelrey-borntodie" />
+        <div class="card-body">
+          <div class="album-artist-name">
+            <h4 id="artist-name">Lana Del Rey</h4>
+            <hr />
+            <h5 id="album-name">Born To Die</h5>
+          </div>
+          <div class="row">
+            <div class="col left" id="metainfo">
+              <ul>
+                <li>Released:</li>
+                <li>Genre:</li>
+                <li>Songs</li>
+              </ul>
+            </div>
+            <div class="col right" id="metainfo-var">
+              <ul>
+                <li>2012</li>
+                <li>Electronica</li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+          <a href="#r6" class="btn btn-secondary w-100">Review</a>
+        </div>
       </div>
     </div>
-  </div>
+    <h2 id="01">reviews</h2>
+    <hr />
+    <div
+      id="review-container"
+      class="review container row col-9 justify-content-center bg-secondary"
+    >
+      <div class="review-card col-6" id="r1">
+        <div class="hvrbox">
+          <img
+            src="./img/lanadelrey-borntodie.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2012</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Electronica</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+      <div class="review-card col-6" id="r2">
+        <div class="hvrbox">
+          <img
+            src="./img/Josiedunne-tobethelittlefish.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2018</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Pop</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>6</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+      <div class="review-card col-12" id="r3">
+        <div class="hvrbox">
+          <img
+            src="./img/lizzo-goodashell.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2018</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Pop</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>14</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+      <div class="review-card col-4" id="r4">
+        <div class="hvrbox">
+          <img
+            src="./img/lanadelrey-borntodie.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2012</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Electronica</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+      <div class="review-card col-4" id="r5">
+        <div class="hvrbox">
+          <img
+            src="./img/lanadelrey-borntodie.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2012</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Electronica</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+      <div class="review-card col-4" id="r6">
+        <div class="hvrbox">
+          <img
+            src="./img/lanadelrey-borntodie.jpg"
+            alt="Mountains"
+            class="hvrbox-layer_bottom"
+          />
+          <div class="hvrbox-layer_top">
+            <div class="hvrbox-text">
+              <ul>
+                <li><strong>DURATION</strong></li>
+                <li>49:28</li>
+                <hr />
+                <li><strong>RELEASED</strong></li>
+                <li>2012</li>
+                <hr />
+                <li><strong>GENRE</strong></li>
+                <li>Electronica</li>
+                <hr />
+                <li><strong>SONGS</strong></li>
+                <li>12</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ccc">
+          <span class="fas fa-quote-left"></span
+          ><span id="quote-title">This is the review subline</span
+          ><span class="fas fa-quote-right"></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, ex
+            necessitatibus quisquam doloremque ducimus iure voluptatem facilis
+            labore alias temporibus possimus aperiam, doloribus, dignissimos
+            perspiciatis placeat incidunt officiis. Nostrum, reiciendis?
+          </p>
+          <p>- Jules Verne</p>
+        </div>
+      </div>
+    </div>
+    <h2>Hall of SHame</h2>
+    <hr />
+    <div class="hall-of-shame"></div>
+    <div class="carosoul">
+      <div class="bd-example">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-target="#carouselExampleCaptions"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="./img/coldplay.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Nulla vitae elit libero, a pharetra augue mollis interdum.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/coldplay.jpg" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="./img/justin.jpg"d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Praesent commodo cursus magna, vel scelerisque nisl
+                  consectetur.
+                </p>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <h2>Featured Artist</h2>
+    <div class="featured-artist container">
+      <div class="heading">
+        <h3>Yolanda Quartey</h3>
+      </div>
 
+      <div class="feature picture">
+        <img class="" id="yola" src="./img/yola.jpg" alt="yola" />
+        <p>
+          Yolanda Quartey (born 31 July 1983[2]), known professionally as Yola
+          or Yola Carter, is an English musician, singer and songwriter from
+          Bristol, England. She became the lead singer of the band Phantom Limb,
+          who released their first album in 2010.[3] She has performed backing
+          vocals for numerous artists including Massive Attack, The Chemical
+          Brothers, Ginger Wildheart and Iggy Azalea. Yola received four
+          nominations at the 62nd Grammy Awards, including the all-genre Best
+          New Artist category. Yola released her first solo EP, Orphan Offering,
+          in 2016. In February 2019, she released her debut album Walk Through
+          Fire on Dan Auerbach's Easy Eye Sound label, to much acclaim.[2][6][7]
+          The album title references both a fire which damaged Yola's home and
+          an abusive relationship from which she escaped.[8] AllMusic called the
+          album "an extraordinary record, one designed to be part of a grand
+          musical tradition, and it contains enough emotion and imagination to
+          earn its place within that lineage."[9] Brittney McKenna of NPR
+          Music's First Listen declared, "It's the work of an artist sure to
+          stun audiences for years to come."[10] The Wall Street Journal stated,
+          "The album is an introduction to a seasoned, major vocalist that
+          stands to be remembered as a breakthrough."
+        </p>
+      </div>
+    </div>
+    <button
+      onclick="topFunction()"
+      id="myBtn"
+      class="btn btn-secondary"
+      title="Go to top"
+    >
+      TOP
+    </button>
+    <footer>
+      <span>TOTAL ALBUMS:</span>
+      <span id="card-total">contains</span>
+    </footer>
 
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      //Get the button:
+      mybutton = document.getElementById("myBtn");
 
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+        totalCards();
+      };
 
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
 
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
 
-  <footer>COunt all albums
-
-  </footer>
-
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
-  </script>
-  <script src="main.js" async defer></script>
-</body>
-
+      function totalCards() {
+        let card = document.querySelectorAll("#album-card");
+        let total = document.getElementById("card-total");
+        for (let i = 1; i < card.length; i++) {
+          i += 1;
+          total.innerHTML = `${i}`;
+        }
+      }
+    </script>
+  </body>
 </html>

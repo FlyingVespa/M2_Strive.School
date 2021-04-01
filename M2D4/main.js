@@ -9,27 +9,38 @@ function addPerson() {
   if (person.value !== "") {
     const li = document.createElement("li");
     const span = document.createElement("span");
-    li.className = "col list-person-name card";
+    li.className = "list-person-name";
     span.className = "person-name";
     span.appendChild(document.createTextNode(`${newPerson}`));
     li.appendChild(span);
+
     li.addEventListener("click", function (e) {
       e.target.remove();
     });
     mainList.appendChild(li);
-    // Alternative create element (preffered method)
-    // const newName = `
-    //     <div class="col card">
-    //     <span>${newPerson}<i class="fas fa-trash float-right"></i></span>
-    //     </div>
-    //       `;
-    // mainList.innerHTML += newName;
 
     // Clear input
     person.value = "";
   } else {
     alert("Please add a name");
   }
+}
+function Assign() {
+  var LIs = document.querySelector(".main-name-list").childNodes;
+  var list = [];
+  for (var i = 0; i < LIs.length; ++i) {
+    var LI = LIs[i];
+    list.push(LI.innerText || LI.textContent);
+  }
+  console.log(LI);
+  var lists = [];
+  while (lists.length < list.length) {
+    var item = Math.floor(Math.random() * LI.length);
+    if (lists.indexOf(item) === -1) {
+      lists.push(item);
+    }
+  }
+  console.log(lists);
 }
 
 // function removePerson(e) {

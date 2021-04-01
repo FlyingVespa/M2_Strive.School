@@ -45,6 +45,7 @@ h2,
 h3 {
   font-family: Kanit;
   font-size: 2rem;
+  filter: drop-shadow(1px 2px 5px black);
 }
 
 #day {
