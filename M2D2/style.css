@@ -296,6 +296,11 @@ hr {
   font-size: 20px;
 }
 
-.btn .btn-secondary {
-  font-stretch: extra-condensed;
+footer {
+  height: fit-content;
+}
+
+form {
+  border: blue 2px solid;
+  width: 400px !important;
 }
