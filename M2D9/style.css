@@ -1,280 +1,307 @@
-/*----------------------------------------------------------------------------- 
-Author:     Hedri Nel
-Email:      mailhedri@gmail.com 
-Github:     https://github.com/FlyingVespa
------------------------------------------------------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Staatliches&display=swap");
 
-/* ----------------- Table of Contents
-0. Defaults & Imports
-1.
-2.
-3.
-4.
-5.
-6.
-     -----------------*/
-/* ----------------- 0 ---------------- */
-/* Font Imports */
-
-/* Remove padding and margin */
 * {
-  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
+
 body {
-  background-color: burlywood !important;
+  background-color: rgb(51, 51, 51) !important;
 }
 
-.clear {
-  clear: both;
+#featured-artist {
+  border: solid rgb(38, 148, 5) 5px;
+}
+.card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+.card-01 .badge-box {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  margin-left: -50px;
+  text-align: center;
+  border-radius: 5%;
+  border: 5px solid black;
+}
+.card-01 .badge-box i {
+  background: #006eff;
+  color: #fff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 5%;
+  border: 5px solid black;
 }
 
-.right {
-  float: right;
+.avatar {
+  display: block;
+  height: 95px;
+  width: 95px;
+  margin: auto;
+  position: absolute;
+  top: -55px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 15%;
+  border: 5px solid #68a22b;
+  box-shadow: inset 10px 10px 50px 50px rgb(0, 0, 0, 1);
+  overflow: hidden;
 }
 
-.left {
-  float: left;
-}
-hr {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-#review-image {
-  width: 20vh;
-}
-#review-image:hover {
-  opacity: 0.2;
-}
-
-#artist-info {
+.avatar h3 {
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  visibility: hidden;
+}
+.avatar h3:hover {
+  visibility: visible;
 }
 
-/* ----------------- 1 ---------------- */
-
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-  text-align: center;
-}
-h4 {
-  text-align: center;
-
-  text-transform: uppercase;
-}
-h5 {
-  text-align: center;
-}
-span {
-  margin: 5px;
-  font-size: 20px;
-}
-
-#artist-name {
-  font-weight: 800;
-  font-size: 2rem;
-}
-#album-name {
-  font-weight: 500;
-  font-style: italic;
-  text-transform: capitalize;
-}
-
-/* ----------------- 2 images---------------- */
-
-.album-reviews {
-  flex: 1;
-  justify-content: space-around;
-  margin: 10px;
-  padding: 10px;
-}
-
-/* ----------------- 3 ---------------- */
-li {
-  list-style-type: none;
-}
-#metainfo {
-  font-weight: 800;
-}
-#metainfo-var {
-  text-align: right;
-}
-#mdata {
-  display: flex;
-
-  font-weight: 800;
-}
-.metadata p {
-  font-style: italic;
-}
-#img-review {
-  object-fit: cover;
-  width: 100%;
+.avatar img {
   height: 100%;
 }
-#album-container {
-  margin: 0 auto;
-  width: 100%;
-}
-#album-card {
-  background-color: cadetblue;
+.avatar img:hover {
+  opacity: 0.2;
 }
 
-/* ----------------- 4 ---------------- */
-footer {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #2e2e2e;
-  color: white;
-  text-align: center;
-  height: 8vh;
-}
-/* ----------------- 5 ---------------- */
-
-@media (min-width: 576px) {
-}
-
-@media (min-width: 768px) {
-}
-
-@media (min-width: 992px) {
-}
-
-@media (min-width: 1200px) {
-}
-
-#quote-title {
-  font-size: 20px;
-  text-align: center;
-  text-transform: capitalize;
-  font-weight: 800;
-}
 .card {
-  margin: 10px;
-  padding: 10px;
+  border-radius: 3% !important;
+  filter: drop-shadow(10px 15px 15px rgb(0, 0, 0));
+  transition: 0.5s;
+  border: 5px solid #68a22b !important;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 20px 5px rgb(0, 0, 0, 0.5);
 }
 
-.container {
-  display: flex;
-  align-self: center;
-  padding: 20px;
-  border: red 5px solid;
-}
-#review-container {
-  justify-content: center;
-  justify-self: center;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.review-card {
-  display: flex;
-  border: black 2px solid;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
-  align-content: stretch;
-  align-items: stretch;
-}
-
-.hvrbox,
-.hvrbox * {
-  padding: 5px;
-  box-sizing: border-box;
-}
-.hvrbox {
-  padding: 5px;
-  position: relative;
-  overflow: hidden;
-  max-width: 250px;
-  height: auto;
-}
-.hvrbox img {
-  max-width: 250px;
-  border-radius: 10px;
-}
-.hvrbox .hvrbox-layer_bottom {
-  flex: 1;
-}
-
-.hvrbox .hvrbox-layer_top {
-  flex: 1;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-  -moz-transition: all 0.4s ease-in-out 0s;
-  -webkit-transition: all 0.4s ease-in-out 0s;
-  -ms-transition: all 0.4s ease-in-out 0s;
-  transition: all 0.4s ease-in-out 0s;
-}
-.hvrbox:hover .hvrbox-layer_top,
-.hvrbox.active .hvrbox-layer_top {
+.card:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+  z-index: 99;
   opacity: 1;
 }
-.hvrbox .hvrbox-text {
-  flex: 1;
-  margin: 15px;
-  text-align: center;
-  font-size: 1.2rem;
-  position: absolute;
-  line-height: 1;
-}
 
-hr {
-  line-height: 0.5;
-  padding: 5px !important;
-  margin: 5px !important;
-}
-.ccc {
-  flex: 2;
-  margin: 10px;
-  padding: 15px;
-  border: grey 1px solid;
-  border-radius: 5px;
-}
-
-#myBtn {
-  position: fixed; /* Fixed/sticky position */
-  bottom: 100px;
-  right: 30px;
-  width: 5rem;
-  height: 4rem;
-}
-
-#myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
-}
-
-#yola {
-  object-fit: cover;
+.card a {
   width: 100%;
-  overflow: hidden;
 }
 
-.featured-artist .container {
-  margin: 0 auto;
-  flex: none;
+.badge {
+  position: absolute;
+  top: -5%;
+  right: 0;
+  width: 50%;
+  filter: drop-shadow(2px 2px 5px rgb(0, 0, 0));
+  background-color: #68a22b;
+  border-radius: 15%;
+  color: #fff;
+  vertical-align: middle;
 }
+
+.jumbotron {
+  background-color: rgb(15, 133, 31) !important;
+  border-radius: 0px !important;
+  filter: drop-shadow(3px 3px 5px rgb(0, 0, 0));
+  padding-bottom: 10px !important;
+}
+
+.jumbotron span {
+  margin: 0 auto;
+  font-family: Oswald;
+  color: rgb(0, 0, 0);
+  font-size: 4.2rem !important;
+  line-height: 1;
+  text-align: center;
+}
+.text-wrap {
+  text-align: center;
+}
+.jumbotron span:nth-child(2) {
+  font-family: Oswald;
+  color: rgb(29, 170, 53);
+}
+
+.jumbotron p {
+  text-align: center;
+}
+
+.jumbotron img {
+  float: right !important;
+  height: 35vh;
+  margin: 10px;
+  filter: drop-shadow(5px 5px 10px rgb(0, 0, 0)) !important;
+  visibility: hidden;
+}
+
+.navbar {
+  background-color: rgb(10, 10, 10);
+  color: #fff !important;
+}
+
 .heading {
-  display: inline-block;
-  flex: none;
-  margin: 0 auto;
+  font-size: 5rem;
+  font-weight: 700;
+  font-family: Oswald;
 }
 
-.w-100 {
-  width: 100% !important;
-  height: 75vh;
+.heading span:nth-child(2) {
+  color: #68a22b;
 }
+
+@media screen and (min-width: 360px) {
+  .jumbotron span {
+    font-family: Oswald;
+    color: rgb(0, 0, 0);
+    font-size: 4rem !important;
+    line-height: 1;
+  }
+  .jumbotron span:nth-child(2) {
+    font-family: Oswald;
+    color: rgb(29, 170, 53);
+  }
+
+  .jumbotron img {
+    height: 35vh;
+    top: 0px;
+    right: 10px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+  }
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: olive;
+  }
+
+  .jumbotron {
+    background-color: #fff !important;
+    border-radius: 0px !important;
+    filter: drop-shadow(3px 3px 5px rgb(0, 0, 0));
+  }
+
+  .jumbotron span {
+    font-family: Oswald;
+    color: rgb(0, 0, 0);
+    font-size: 5rem !important;
+  }
+
+  .jumbotron img {
+    height: 30vh;
+    top: 25px;
+    right: 25px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+  }
+}
+
+@media screen and (min-width: 980px) {
+  body {
+    background-color: blue;
+  }
+
+  .jumbotron {
+    background-color: #fff !important;
+    border-radius: 0px !important;
+    filter: drop-shadow(3px 3px 5px rgb(0, 0, 0));
+    text-align: left !important;
+  }
+
+  .text-wrap {
+    text-align: left;
+  }
+  .jumbotron p {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 50px !important;
+  }
+
+  .jumbotron img {
+    height: 80vh;
+    top: 5px;
+    position: absolute;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+    visibility: visible;
+    z-index: -1;
+  }
+
+  #featured-artist {
+    padding: 20px;
+    filter: drop-shadow(5px 5px 10px rgb(0, 0, 0));
+    background: #fff;
+    border-radius: 5px;
+  }
+
+  .text-heading h2 {
+    text-transform: uppercase;
+    font-family: Oswald;
+    font-size: 3rem !important;
+    text-align: right !important;
+  }
+
+  #bill {
+    height: 450px;
+    float: left;
+    shape-outside: url(./img/bill.png);
+    shape-margin: 1em;
+  }
+
+  #featured-artist p {
+    background-color: #fff;
+    text-align: justify;
+  }
+  .text-heading {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .text-heading hr {
+    margin: 0 auto;
+    height: 3.5px;
+    background-color: rgb(34, 160, 61);
+    margin-bottom: 10px;
+  }
+
+  #featured-artist i {
+    top: 50px !important;
+    font-size: 5rem;
+    shape-outside: circle();
+    width: 100px;
+  }
+
+  #quote-left {
+    float: left;
+    margin-left: -70px;
+    height: 5rem;
+    shape-outside: url(./img/quote-left.svg);
+    shape-margin: 10px;
+    padding: 10px;
+  }
+  .card-body p {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 0;
+  }
+  .card-body hr {
+    line-height: 0;
+    margin: 0;
+  }
+  .card .col-6:nth-child(1) {
+    font-weight: 700;
+  }
+  .card {
+    padding: -5px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
