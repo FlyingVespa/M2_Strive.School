@@ -8,7 +8,9 @@
 body {
   background-color: rgb(51, 51, 51) !important;
 }
-
+footer .container {
+  height: 100px;
+}
 #featured-artist {
   border: solid rgb(38, 148, 5) 5px;
 }
